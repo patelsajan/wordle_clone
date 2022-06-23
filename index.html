@@ -1,9 +1,5 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<script src="./words_5_chars.js"></script>
-		<script src="./index.js"></script>
-	</head>
 	<style>
 		body {
 			background-color: black;
@@ -15,17 +11,21 @@
 			margin: 10px;
 			background-color: white;
 			display: block;
+			overflow: hidden;
+			text-transform: capitalize;
 		}
 	</style>
 
 	<body>
 		<div>
-			<div class="input input-1"> test </div>
+			<div id="div1" class="input input-1"></div>
 			<div class="input input-2"> </div>
 			<div class="input input-3"> </div>
 			<div class="input input-4"> </div>
 			<div class="input input-5"> </div>
 			<div class="input input-6"> </div>
 		</div>
+		<script src="./words_5_chars.js"></script>
+		<script src="./index.js"></script>
 	</body>
 </html>
