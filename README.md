@@ -1,1 +1,1 @@
-a wordle clone made with js.
+a wordle clone made with HTML and JS.
