@@ -9,22 +9,36 @@
 			width: 70vw;
 			height: 10vh;
 			margin: 10px;
-			background-color: white;
 			display: block;
+			color: white;
+			text-align: center;
 			overflow: hidden;
+			padding-bottom: 10px;
+			font-family: monospace;
 			text-transform: uppercase;
-			background-color: gray;
+			background-color:black;
+			border-style: hidden hidden solid hidden;
+
+		}
+		.focus {
+			border-color: rgb(202, 28, 255);
+		}
+		.wrong_input {
+			border-color: rgb(255, 94, 94);
+		}
+		.correct_input {
+			border-color: rgb(96, 255, 96);
 		}
 	</style>
 
 	<body>
 		<div id="container">
 			<div id="div1" class="input input-1"></div>
-			<div id="div2" class="input input-2"> test</div>
-			<div id="div3" class="input input-3"> </div>
-			<div id="div4" class="input input-4"> </div>
-			<div id="div5" class="input input-5"> </div>
-			<div id="div6" class="input input-6"> </div>
+			<div id="div2" class="input input-2"></div>
+			<div id="div3" class="input input-3"></div>
+			<div id="div4" class="input input-4"></div>
+			<div id="div5" class="input input-5"></div>
+			<div id="div6" class="input input-6"></div>
 		</div>
 		<script src="./words_5_chars.js"></script>
 		<script src="./index.js"></script>
