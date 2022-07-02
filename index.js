@@ -37,9 +37,10 @@ const keypress = function keypress(event) {
 // yellow: letter is in the selected word but input is in the wrong position.
 // no color: letter is not present in the selected word.
 function evaluateWord(word) {
-  // if (!words_list.includes(word)) {
-  //   return;
-  // }
+  if (!words_list.includes(word)) {
+    alert(word.toUpperCase()+' is not allowed.');
+    return;
+  }
   let result = "";
   const input_word_array = word.split("");
   let correct_letter_count = 0;
@@ -59,12 +60,14 @@ function evaluateWord(word) {
   if (correct_letter_count === 5) {
     current_input.classList.add("correct_input");
     document.removeEventListener("keydown", keypress);
+    return;
   } else {
     current_input.classList.add("wrong_input");
   }
-  // move to the next input div and set the values. reset if 6 wrong inputs
+  // move to the next input div and set the values.stop if 6 wrong inputs
   if (input_index === 5) {
     document.removeEventListener("keydown", keypress);
+    return;
   } else {
     input_index++;
     current_input = container_div.children[input_index];
